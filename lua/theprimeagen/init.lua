@@ -1,2 +1,2 @@
 require("theprimeagen.remap")
-print("hello from theprimeagen")
+print("加载 theprimeagen")
