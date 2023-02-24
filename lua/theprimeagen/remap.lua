@@ -1,8 +1,9 @@
-vim.g.mapleader = ","
---vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+--可视模式下，大写的J和K可以上下移动选中的内容
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -21,7 +22,9 @@ end)
 -- 在光标处插入寄存器的内容
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+
 -- next greatest remap ever : asbjornHaland
+-- 系统级复制
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 --左右上下窗口切换
@@ -33,14 +36,18 @@ vim.keymap.set("n", "gl", "<c-w>l")
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
+-- 用ctrl+c替代<esc>
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 --禁用大写Q
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+--格式化代码
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+-- 显示下一个err
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- 显示上一个err
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
@@ -55,5 +62,3 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
---opentree
-vim.keymap.set("n","<leader>t","<cmd>NvimTreeToggle<CR>")

@@ -58,27 +58,28 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+--    use {
+--        'nvim-tree/nvim-tree.lua',
+--        requires = {
+--            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+--        },
+--        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+--    }
     -- Dashboard
-    use {
-        'goolord/alpha-nvim',
-        config = function()
-            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
-        end
-    }
-    use({
-        "NTBBloodbath/galaxyline.nvim",
-        -- your statusline
-        config = function()
-            require("galaxyline.themes.eviline")
-        end,
-        -- some optional icons
-        requires = { "kyazdani42/nvim-web-devicons", opt = true }
-    })
+--    use {
+--        'goolord/alpha-nvim',
+--        config = function()
+--            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+--        end
+--    }
+--    use 'kyazdani42/nvim-web-devicons'
+--    use({
+--        "NTBBloodbath/galaxyline.nvim",
+--        -- your statusline
+--        config = function()
+--            require("galaxyline.themes.eviline")
+--        end,
+--        -- some optional icons
+--        requires = { "kyazdani42/nvim-web-devicons", opt = true }
+--    })
 end)
