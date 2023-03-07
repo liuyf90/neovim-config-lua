@@ -32,6 +32,14 @@ vim.keymap.set("n", "gh", "<c-w>h")
 vim.keymap.set("n", "gj", "<c-w>j")
 vim.keymap.set("n", "gk", "<c-w>k")
 vim.keymap.set("n", "gl", "<c-w>l")
+vim.keymap.set("n", "<C-w>M", "<C-W>|<C-W>_", { silent = true })
+vim.keymap.set("n", "<C-w>m", "<C-W>=", {silent = true})
+
+--用方向健调整window大小
+vim.keymap.set("n", "<Left>", "<C-w><lt>", {silent = true})
+vim.keymap.set("n", "<Right>", "<C-w>>", {silent = true})
+vim.keymap.set("n", "<Up>", "<C-w>-", {silent = true})
+vim.keymap.set("n", "<Down>", "<C-w>+", {silent = true})
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
@@ -51,14 +59,21 @@ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
+--对光标所在词进行批量修改
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+--对当前文件赋予执行权限
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+--缓冲区导航映射
+vim.keymap.set("n", "[b", ":bprevious<CR>", { silent = true })
+vim.keymap.set("n", "]b", ":bnext<CR>", { silent = true })
+vim.keymap.set("n", "[B", ":bfirst<CR>", { silent = true })
+vim.keymap.set("n", "]B", ":blast<CR>", { silent = true })
 

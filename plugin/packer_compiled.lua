@@ -109,6 +109,12 @@ _G.packer_plugins = {
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["galaxyline.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30galaxyline.themes.eviline\frequire\0" },
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/NTBBloodbath/galaxyline.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -143,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -179,10 +190,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/vim-rails",
+    url = "https://github.com/tpope/vim-rails"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: galaxyline.nvim
+time([[Config for galaxyline.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30galaxyline.themes.eviline\frequire\0", "config", "galaxyline.nvim")
+time([[Config for galaxyline.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\ne\0\0\3\0\6\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\nsetup\14rose-pine\frequire\0", "config", "rose-pine")

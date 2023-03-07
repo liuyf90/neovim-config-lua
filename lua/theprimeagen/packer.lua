@@ -72,14 +72,17 @@ return require('packer').startup(function(use)
 --            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
 --        end
 --    }
---    use 'kyazdani42/nvim-web-devicons'
---    use({
---        "NTBBloodbath/galaxyline.nvim",
---        -- your statusline
---        config = function()
---            require("galaxyline.themes.eviline")
---        end,
---        -- some optional icons
---        requires = { "kyazdani42/nvim-web-devicons", opt = true }
---    })
+    use 'kyazdani42/nvim-web-devicons'
+    use({
+        "NTBBloodbath/galaxyline.nvim",
+        -- your statusline
+        config = function()
+            require("galaxyline.themes.eviline")
+        end,
+        -- some optional icons
+        requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    })
+
+    --rails plug
+    use 'tpope/vim-rails'
 end)
