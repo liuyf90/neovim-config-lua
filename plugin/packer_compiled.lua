@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -134,6 +139,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nginx.vim"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nginx.vim",
+    url = "https://github.com/chr4/nginx.vim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -195,6 +205,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/vim-rails",
     url = "https://github.com/tpope/vim-rails"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 

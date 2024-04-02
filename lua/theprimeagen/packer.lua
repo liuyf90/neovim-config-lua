@@ -85,4 +85,10 @@ return require('packer').startup(function(use)
 
     --rails plug
     use 'tpope/vim-rails'
+
+    use 'chr4/nginx.vim'
+    use 'tpope/vim-surround'
+    --copilot
+    use 'github/copilot.vim'
+
 end)

@@ -1,3 +1,4 @@
+--键入<leader>pv,将退回到目录树中
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -32,14 +33,8 @@ vim.keymap.set("n", "gh", "<c-w>h")
 vim.keymap.set("n", "gj", "<c-w>j")
 vim.keymap.set("n", "gk", "<c-w>k")
 vim.keymap.set("n", "gl", "<c-w>l")
-vim.keymap.set("n", "<C-w>M", "<C-W>|<C-W>_", { silent = true })
-vim.keymap.set("n", "<C-w>m", "<C-W>=", {silent = true})
-
---用方向健调整window大小
-vim.keymap.set("n", "<Left>", "<C-w><lt>", {silent = true})
-vim.keymap.set("n", "<Right>", "<C-w>>", {silent = true})
-vim.keymap.set("n", "<Up>", "<C-w>-", {silent = true})
-vim.keymap.set("n", "<Down>", "<C-w>+", {silent = true})
+vim.keymap.set("n", "<C-W>M", "<C-W>|<C-W>_", { silent = true })
+vim.keymap.set("n", "<C-W>m", "<C-W>=", {silent = true})
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
@@ -76,4 +71,8 @@ vim.keymap.set("n", "[b", ":bprevious<CR>", { silent = true })
 vim.keymap.set("n", "]b", ":bnext<CR>", { silent = true })
 vim.keymap.set("n", "[B", ":bfirst<CR>", { silent = true })
 vim.keymap.set("n", "]B", ":blast<CR>", { silent = true })
+
+
+
+--lazygit
 
