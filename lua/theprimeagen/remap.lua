@@ -1,10 +1,10 @@
 --键入<leader>pv,将退回到目录树中
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 --可视模式下，大写的J和K可以上下移动选中的内容
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -34,7 +34,7 @@ vim.keymap.set("n", "gj", "<c-w>j")
 vim.keymap.set("n", "gk", "<c-w>k")
 vim.keymap.set("n", "gl", "<c-w>l")
 vim.keymap.set("n", "<C-W>M", "<C-W>|<C-W>_", { silent = true })
-vim.keymap.set("n", "<C-W>m", "<C-W>=", {silent = true})
+vim.keymap.set("n", "<C-W>m", "<C-W>=", { silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
@@ -75,4 +75,3 @@ vim.keymap.set("n", "]B", ":blast<CR>", { silent = true })
 
 
 --lazygit
-

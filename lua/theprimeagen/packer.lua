@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
     --并提供一些基本的功能，例如基于 it 的突出显示
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
-    -- 一套快捷健
+    -- 鱼叉，可以存储5个文件的快捷入口
     use('ThePrimeagen/harpoon')
 
     -- 撤销树
