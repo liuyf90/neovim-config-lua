@@ -65,3 +65,17 @@
 | 系统级操作     | 快速回到命令行窗口,但不退出nvim          | `<c-z>`        |
 |                | 从shell返回nvim                          | `fg`           |
 
+
+
+
+在springboot等依赖grable,mvn等环境的项目中,可能直接打开java文件会有很多error提示,这是因为工程文件没有建立
+
+在build.grable文件中加入eclispe的工程支持
+ >>>
+ 		plugins {
+    			id 'eclipse'
+		}
+  >>>
+在sh中执行
+>>>
+		./gradlew eclipse
