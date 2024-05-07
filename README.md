@@ -69,6 +69,8 @@
 |                | split 纵向增加窗口panel                  | `<c-w>+s`      |
 | 系统级操作     | 快速回到命令行窗口,但不退出nvim          | `<c-z>`        |
 |                | 从shell返回nvim                          | `fg`           |
+| Debug               | 打开关闭调试器                          | `<leader>dt`           |
+|                |  标记断点                         | `<leader>db`           |
 
 
 
