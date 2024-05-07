@@ -35,3 +35,8 @@ vim.opt.colorcolumn = "80"
 -- init.vim
 vim.opt.syntax = 'nginx'
 vim.opt.filetype = 'nginx'
+
+
+
+
+

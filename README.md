@@ -17,6 +17,8 @@
 11. nvim-tree 树形菜单   https://github.com/nvim-tree/nvim-tree.lua
 12. copilot Github的copilot https://github.com/onsails/lspkind.nvim
 13. copilot-cmp  copilot的样式及快捷键 https://github.com/zbirenbaum/copilot-cmp
+14. galaxyline: 底栏的样式   "NTBBloodbath/galaxyline.nvim",
+
 
 # 快捷键
 | 组             | 功能描述                                 | 快捷键         |

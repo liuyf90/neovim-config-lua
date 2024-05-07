@@ -62,6 +62,17 @@ return require('packer').startup(function(use)
     -- cmp的样式
     use 'onsails/lspkind-nvim'
 
+    -- 底栏的样式
+    use({
+        "NTBBloodbath/galaxyline.nvim",
+        -- your statusline
+        config = function()
+            require("galaxyline.themes.eviline")
+        end,
+        -- some optional icons
+        requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    })
+
     --copilot
     use {
         "zbirenbaum/copilot.lua",
@@ -78,4 +89,19 @@ return require('packer').startup(function(use)
      --      require("copilot_cmp").setup()
      --  end
     }
+
+    -- debuger
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = {
+            {"mfussenegger/nvim-dap"},
+            {"nvim-neotest/nvim-nio"}
+        }
+    }
+   -- 此插件为 nvim-dap 添加了虚拟文本支持和nvim-treesitter 用于查找变量定义。
+    use 'theHamsta/nvim-dap-virtual-text'
+    --nvim-dap 的扩展，提供用于启动 go 调试器和调试单个测试的配置。
+    use 'leoluz/nvim-dap-go'
+
+
 end)
