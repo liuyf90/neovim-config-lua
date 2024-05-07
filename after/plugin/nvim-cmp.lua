@@ -2,8 +2,12 @@ local cmp = require('cmp')
 
 cmp.setup({
   sources = {
-    {name = 'copilot'},
-    {name = 'nvim_lsp'},
+      --Copilot source
+    {name = 'copilot', group_index = 2},
+    --other Sources
+    {name = 'nvim_lsp',group_index =2 },
+    {name = 'path',group_index =2 },
+    {name = 'luasnip',group_index =2 },
   },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({
@@ -14,3 +18,6 @@ cmp.setup({
     })
   })
 })
+
+
+

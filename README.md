@@ -13,7 +13,10 @@
 8. fugitive.vim:  Fugitive is the premier Vim plugin for Git  https://github.com/tpope/vim-fugitive
 9. lsp-zero: lsp语言服务器, 类ide https://github.com/VonHeikemen/lsp-zero.nvim?tab=readme-ov-file
      安装Lsp服务 	在命令行下 :Mason,然后选择要安装的lspserver,按i 安装
-
+10.lspkind-nvim:  cmp的样式 https://github.com/onsails/lspkind.nvim
+11. nvim-tree 树形菜单   https://github.com/nvim-tree/nvim-tree.lua
+12. copilot Github的copilot https://github.com/onsails/lspkind.nvim
+13. copilot-cmp  copilot的样式及快捷键 https://github.com/zbirenbaum/copilot-cmp
 
 # 快捷键
 | 组             | 功能描述                                 | 快捷键         |

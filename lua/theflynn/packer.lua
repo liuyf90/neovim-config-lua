@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter', 
 		{run = ':TSUpdate'}
 	)
-	--调试treesitter用的,不会用
+	--调试treesitter用的, 可以不装
 	use (
 		'nvim-treesitter/playground'
 	)
@@ -53,20 +53,29 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+    -- cmp的样式
+    use 'onsails/lspkind-nvim'
+
     --copilot
-   -- use {
-   --     "zbirenbaum/copilot.lua",
-   --     cmd = "Copilot",
-   --     event = "InsertEnter",
-   --     config = function()
-   --         require("copilot").setup({})
-   --     end,
-   -- }
-   -- use {
-   --     "zbirenbaum/copilot-cmp",
-   --     after = { "copilot.lua" },
-   --     config = function ()
-   --         require("copilot_cmp").setup()
-   --     end
-   -- }
+    use {
+        "zbirenbaum/copilot.lua",
+      --  cmd = "Copilot",
+      --  event = "InsertEnter",
+      --  config = function()
+      --      require("copilot").setup({})
+      --  end,
+    }
+    use {
+        "zbirenbaum/copilot-cmp",
+        after = { "copilot.lua" },
+     --  config = function ()
+     --      require("copilot_cmp").setup()
+     --  end
+    }
 end)
