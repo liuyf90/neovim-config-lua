@@ -156,6 +156,16 @@ _G.packer_plugins = {
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
+  ["nvim-java-test"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-java-test",
+    url = "https://github.com/nvim-java/nvim-java-test"
+  },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/liuyf/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
