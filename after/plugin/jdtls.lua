@@ -99,11 +99,11 @@ local function get_jdtls_paths()
     --
     -- This example assume you are using sdkman: https://sdkman.io
      {
-       name = 'openjdk-21.0.3',
+       name = '21.0.3-tem',
        path = vim.fn.expand('~/.sdkman/candidates/java/21.0.3-tem'),
      },
      {
-       name = 'openjdk-22',
+       name = '22-open',
        path = vim.fn.expand('~/.sdkman/candidates/java/22-open'),
      },
     -- {
