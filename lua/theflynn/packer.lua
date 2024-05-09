@@ -77,18 +77,18 @@ return require('packer').startup(function(use)
     --copilot
     use {
         "zbirenbaum/copilot.lua",
-      --  cmd = "Copilot",
-      --  event = "InsertEnter",
-      --  config = function()
-      --      require("copilot").setup({})
-      --  end,
+        --cmd = "Copilot",
+        --event = "InsertEnter",
+        config = function()
+            require("copilot").setup({})
+        end,
     }
     use {
         "zbirenbaum/copilot-cmp",
         after = { "copilot.lua" },
-     --  config = function ()
-     --      require("copilot_cmp").setup()
-     --  end
+        config = function ()
+            require("copilot_cmp").setup()
+        end
     }
 
     -- debuger
@@ -103,6 +103,11 @@ return require('packer').startup(function(use)
     use 'theHamsta/nvim-dap-virtual-text'
     --nvim-dap 的扩展，提供用于启动 go 调试器和调试单个测试的配置。
     use 'leoluz/nvim-dap-go'
+    use 'nvim-telescope/telescope-dap.nvim'
+
+    --java jdtls
+    use 'mfussenegger/nvim-jdtls'
+
 
 
 
