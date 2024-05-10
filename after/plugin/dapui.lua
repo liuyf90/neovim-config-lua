@@ -5,11 +5,15 @@ dap.adapters.java = function(callback)
   -- FIXME:
   -- Here a function needs to trigger the `vscode.java.startDebugSession` LSP command
   -- The response to the command must be the `port` used below
+   local executable = {
+    command = 'java',
+    args = {'-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5055'}
+  }
   callback({
     type = 'server';
-    host = '127.0.0.1';
-    port = 5005;
-  })
+    host = config.host;
+    port = config.port;
+  },executable)
 end
 
 dap.configurations.java = {
@@ -45,4 +49,8 @@ vim.keymap.set('n', '<leader>dt', function() dapui.toggle() end)
 vim.keymap.set('n', '<leader>db', ":DapToggleBreakpoint<CR>")
 vim.keymap.set('n', '<leader>dc', ":DapContinue<CR>")
 vim.keymap.set('n', '<leader>dr', function() dapui.open({reset = true}) end)
+
+vim.keymap.set('n', '<leader>dn', ":lua require'dap'.step_over()<CR>")
+vim.keymap.set('n', '<leader>di', ":lua require'dap'.step_into()<CR>")
+vim.keymap.set('n', '<leader>do>', ":lua require'dap'.step_out()<CR>")
 
