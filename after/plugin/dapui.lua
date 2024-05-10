@@ -5,15 +5,11 @@ dap.adapters.java = function(callback)
   -- FIXME:
   -- Here a function needs to trigger the `vscode.java.startDebugSession` LSP command
   -- The response to the command must be the `port` used below
-   local executable = {
-    command = 'java',
-    args = {'-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5055'}
-  }
   callback({
     type = 'server';
-    host = config.host;
-    port = config.port;
-  },executable)
+    host = 'localhost';
+    port = 5005;
+  })
 end
 
 dap.configurations.java = {
@@ -21,7 +17,7 @@ dap.configurations.java = {
     type = 'java';
     request = 'attach';
     name = "Debug (attach) to Port";
-    hostName = "127.0.0.1";
+    hostname = "localhost";
     port = 5005;
   },
 }

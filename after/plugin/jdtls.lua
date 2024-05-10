@@ -1,7 +1,3 @@
-local pp= vim.fn.stdpath('cache')
-print("loading jdtls.lua file")
-print(pp)
-
 local java_cmds = vim.api.nvim_create_augroup('java_cmds', {clear = true})
 local cache_vars = {}
 
@@ -98,14 +94,19 @@ local function get_jdtls_paths()
     -- https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
     --
     -- This example assume you are using sdkman: https://sdkman.io
+     
      {
-       name = '21.0.3-tem',
-       path = vim.fn.expand('~/.sdkman/candidates/java/21.0.3-tem'),
+       name = 'current',
+       path = vim.fn.expand('~/.sdkman/candidates/java/current'),
      },
-     {
-       name = '22-open',
-       path = vim.fn.expand('~/.sdkman/candidates/java/22-open'),
-     },
+  --   {
+  --     name = '21.0.3-tem',
+  --     path = vim.fn.expand('~/.sdkman/candidates/java/21.0.3-tem'),
+  --   },
+  --   {
+  --     name = '22-open',
+  --     path = vim.fn.expand('~/.sdkman/candidates/java/22-open'),
+  --   },
     -- {
     --   name = 'JavaSE-18',
     --   path = vim.fn.expand('~/.sdkman/candidates/java/18.0.2-amzn'),
@@ -135,8 +136,8 @@ local function enable_debugger(bufnr)
   require('jdtls.dap').setup_dap_main_class_configs()
 
   local opts = {buffer = bufnr}
-  vim.keymap.set('n', '<leader>df', "<cmd>lua require('jdtls').test_class()<cr>", opts)
-  vim.keymap.set('n', '<leader>dn', "<cmd>lua require('jdtls').test_nearest_method()<cr>", opts)
+  --vim.keymap.set('n', '<leader>df', "<cmd>lua require('jdtls').test_class()<cr>", opts)
+  --vim.keymap.set('n', '<leader>dn', "<cmd>lua require('jdtls').test_nearest_method()<cr>", opts)
 end
 
 local function jdtls_on_attach(client, bufnr)
