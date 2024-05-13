@@ -1,4 +1,4 @@
-# 使用的插件
+v# 使用的插件
 
 1. packer 包管理器 https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart
 2. telescope 模糊查询工具 https://github.com/nvim-telescope/telescope.nvim
@@ -23,6 +23,7 @@
 # 快捷键
 | 组             | 功能描述                                 | 快捷键         |
 |----------------|------------------------------------------|----------------|
+|                | 打开关闭菜单                             | pp            |
 |                | 回到普通模式                             | `esc`, `<C-[>` |
 | 导航定位       | 调出树形菜单                             | `<leader>+pv`  |
 |                | 上一个缓冲区                             | `[b`           |

@@ -110,6 +110,9 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-jdtls'
 
 
+    --nvim-tree 树形菜单
+    use 'nvim-tree/nvim-tree.lua'
+
 
 
 end)
