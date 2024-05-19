@@ -56,3 +56,15 @@ lsp_zero.set_sign_icons({
   hint = '⚑',
   info = '»'
 })
+
+
+--保存自动格式化
+vim.cmd [[augroup FormatAutogroup
+
+  autocmd!
+  autocmd BufWritePost *.js,*.ts,*.jsx,*.tsx,*.json,*.html,*.css,*.scss,*.md lua formatting()
+augroup END]]
+
+function _G.formatting()
+    vim.lsp.buf.format()
+end
