@@ -109,6 +109,10 @@ return require('packer').startup(function(use)
     --java jdtls
     use 'mfussenegger/nvim-jdtls'
 
+    --该插件用于自动闭合html等标签
+    use {
+        'mattn/emmet-vim',
+    }
 
 
 

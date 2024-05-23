@@ -100,3 +100,21 @@ end
 
 vim.keymap.set("n", "<F9>", function() run_spring_boot() end)
 vim.keymap.set("n", "<F10>", function() run_spring_boot(true) end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

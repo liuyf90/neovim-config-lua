@@ -52,4 +52,5 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
 
-vim.keymap.set("n", "<leader>f", ":TSBufToggle highlight <CR>")
+vim.keymap.set("n", "<leader>h", ":TSBufToggle highlight <CR>")
+ 
