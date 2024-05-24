@@ -1,23 +1,43 @@
-local cmp = require('cmp')
+-- 配置 nvim-cmp
+local cmp = require'cmp'
+local luasnip = require'luasnip'
 
 cmp.setup({
-  sources = {
-      --Copilot source
-    {name = 'copilot', group_index = 2},
-    --other Sources
-    {name = 'nvim_lsp',group_index =2 },
-    {name = 'path',group_index =2 },
-    {name = 'luasnip',group_index =2 },
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({
-      -- documentation says this is important.
-      -- I don't know why.
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = false,
-    })
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<leader><Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item.
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, {
+    { name = 'buffer' },
   })
 })
-
-
 
