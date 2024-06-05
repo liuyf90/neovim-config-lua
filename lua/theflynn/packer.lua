@@ -113,6 +113,8 @@ return require('packer').startup(function(use)
     use {
         'mattn/emmet-vim',
     }
+     -- 安装 vim-commentary 批量注释
+    use 'tpope/vim-commentary'
 
 
 
