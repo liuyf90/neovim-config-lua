@@ -8,6 +8,9 @@ lspconfig.volar.setup {
     typescript = {
       tsdk = '/path/to/your/typescript/lib' -- optional, you can leave it empty
     },
+    vue = {
+      hybridMode = false,
+    },
     languageFeatures = {
       implementation = true, -- enable 'go to implementation'
       references = true,
